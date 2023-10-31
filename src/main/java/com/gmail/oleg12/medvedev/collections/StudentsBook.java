@@ -12,7 +12,8 @@ public class StudentsBook {
 
     public static void addStudent(String id, Student student) {
         studentsjournal.put(id, student);
-        System.out.println("The student " + student.getName() + " has been added into the group " + student.getGroupID());
+        System.out.println("The student " + student.getName() + " has been added into the group "
+            + student.getGroupID() + " and id = " + id);
     }
 
     public void removeStudent(String id) {
@@ -20,8 +21,9 @@ public class StudentsBook {
     }
 
     boolean flag = true;
+
     public void searchByNameAndGroup(String name, int groupID) {
-        for(Map.Entry<String, Student> item : studentsjournal.entrySet()){
+        for (Map.Entry<String, Student> item : studentsjournal.entrySet()) {
             if (item.getValue().getName().equals(name) && item.getValue().getGroupID() == groupID) {
                 System.out.println("The student has been found");
                 break;
