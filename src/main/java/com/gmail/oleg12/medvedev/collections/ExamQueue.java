@@ -2,7 +2,6 @@ package com.gmail.oleg12.medvedev.collections;
 
 import com.gmail.oleg12.medvedev.subobjects.Student;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class ExamQueue {

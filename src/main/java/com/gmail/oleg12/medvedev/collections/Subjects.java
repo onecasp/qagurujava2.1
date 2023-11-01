@@ -1,7 +1,8 @@
 package com.gmail.oleg12.medvedev.collections;
 
 import java.util.HashSet;
-import java.util.*;
+import java.util.List;
+import java.util.Set;
 
 public class Subjects {
     //set
