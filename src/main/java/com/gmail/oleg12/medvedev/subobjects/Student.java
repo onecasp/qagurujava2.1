@@ -54,14 +54,14 @@ public class Student {
         System.out.println("The student " + this.name + " doesn't have book " + book + " anymore");
     }
 
-    public void removeSubject(String subject) {
-        this.assignedSubjects.removeSubject(subject);
+    public void removeSubject(List subject) {
+        this.assignedSubjects.remove2Subject(subject);
         System.out.println(
-            "The student " + this.name + " doesn't have subject " + subject + " anymore");
+            "The student " + this.name + " doesn't have subjects " + subject + " anymore");
     }
 
     public void checkSubject(String subject) {
-        this.assignedSubjects.searchSubject(subject);
+        this.assignedSubjects.search2Subject(subject);
     }
 
     public void checkBook(String book) {

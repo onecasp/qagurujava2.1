@@ -20,12 +20,17 @@ public class StudentsBook {
         studentsjournal.remove(id);
     }
 
-    public void searchByNameAndGroup(String name, int groupID) {
+    public static void searchByNameAndGroup(String name, int groupID) {
+        boolean flag = false;
         for (Map.Entry<String, Student> item : studentsjournal.entrySet()) {
             if (item.getValue().getName().equals(name) && item.getValue().getGroupID() == groupID) {
                 System.out.println("The student has been found");
+                flag = true;
                 break;
             }
+        }
+        if (flag==false) {
+            System.out.println("The student not found in students books :(");
         }
     }
 }

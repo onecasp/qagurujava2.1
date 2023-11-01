@@ -12,18 +12,19 @@ public class Subjects {
         subjectSet.add(subject);
     }
 
-    public static void removeSubject(String subject) {
-        subjectSet.remove(subject);
+    public static void remove2Subject(List list) {
+        int i=0;
+        do {
+            subjectSet.remove(list.get(i));
+            i++;
+        } while (!subjectSet.isEmpty());
     }
 
-    public static void searchSubject(String subject) {
-        do {
-            if(subjectSet.iterator().next().equals(subject)) {
-                System.out.println("The subject " + subject + " has beed found!");
-            }
-            else {
-                System.out.println("The subject " + subject + " not found!");
-            }
-        } while (subjectSet.iterator().hasNext());
+    public static void search2Subject(String subject) {
+        if (subjectSet.contains(subject)) {
+            System.out.println("The subject " + subject + " has beed found!");
+        } else {
+            System.out.println("The subject " + subject + " not found!");
+        }
     }
 }

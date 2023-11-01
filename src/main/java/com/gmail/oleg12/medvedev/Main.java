@@ -50,7 +50,10 @@ public class Main {
         System.out.println(
             "It is time for Math exam. Let's check if students have Math subject firstly");
 
-        //oleg.checkSubject("Math"); - need to be fixed
+        for (Student student : studentsArray) {
+            System.out.println(student.getName() + ":");
+            student.checkSubject("Math");
+        }
 
         System.out.println("");
         System.out.println(
@@ -82,12 +85,16 @@ public class Main {
         newQueue.showTheCurrentQueue();
 
         System.out.println("");
-        System.out.println("Let's check if Oksanan is still in queue:");
+        System.out.println("Let's check if Oksana is still in queue:");
         newQueue.searchInQueue("Oksana");
 
         System.out.println("");
         System.out.println("One more student from another group is arriving:");
         newQueue.addStudentFromQueue(greg);
+
+        System.out.println("But who is Greg?? Let's check if he is in our student book:");
+        StudentsBook.searchByNameAndGroup("Gregory", 234567);
+
         System.out.println("");
         System.out.println("And now the queue looks like:");
         //show the current queue
@@ -103,9 +110,10 @@ public class Main {
                 //books
                 studentsArray[i - 1].removeBook(listOfBooks.get(j));
 
-                //subjects
-                studentsArray[i - 1].removeSubject(listOfSubjects.get(j));
             }
+
+            //subjects
+            studentsArray[i - 1].removeSubject(listOfSubjects);
 
             //and delete them from the journal
             StudentsBook.removeStudent(Integer.toString(i));
