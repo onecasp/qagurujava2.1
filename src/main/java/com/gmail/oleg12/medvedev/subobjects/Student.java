@@ -35,6 +35,10 @@ public class Student {
         return groupID;
     }
 
+    public static Subjects getAssignedSubjects() {
+        return assignedSubjects;
+    }
+
     public void giveBook(String book) {
         this.books.addBook(book);
         System.out.println("The student " + this.name + " has a book " + book);
