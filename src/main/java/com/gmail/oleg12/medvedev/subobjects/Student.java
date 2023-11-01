@@ -59,4 +59,12 @@ public class Student {
         System.out.println(
             "The student " + this.name + " doesn't have subject " + subject + " anymore");
     }
+
+    public void checkSubject(String subject) {
+        this.assignedSubjects.searchSubject(subject);
+    }
+
+    public void checkBook(String book) {
+        this.books.searchBook(book);
+    }
 }

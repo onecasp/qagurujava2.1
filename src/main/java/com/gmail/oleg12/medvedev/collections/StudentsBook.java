@@ -16,7 +16,7 @@ public class StudentsBook {
             + student.getGroupID() + " and id = " + id);
     }
 
-    public void removeStudent(String id) {
+    public static void removeStudent(String id) {
         studentsjournal.remove(id);
     }
 
