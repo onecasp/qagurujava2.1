@@ -42,63 +42,53 @@ public class Main {
             }
         }
 
-        System.out.println("");
         System.out.println(
-            "It is time for Math exam. Let's check if students have Math subject firstly");
+            "\n It is time for Math exam. Let's check if students have Math subject firstly");
 
         for (Student student : studentsArray) {
             System.out.println(student.getName() + ":");
             student.checkSubject("Math");
         }
 
-        System.out.println("");
         System.out.println(
-            "Newton book can help with exam. Let's check if students have it");
+            "\n Newton book can help with exam. Let's check if students have it");
 
         for (Student student : studentsArray) {
             System.out.println(student.getName() + ":");
             student.checkBook("Newton");
         }
 
-        System.out.println("");
-        System.out.println("It is time for exam! Students are coming");
+        System.out.println("\n It is time for exam! Students are coming");
         //to add students to ExamQueue
         ExamQueue newQueue = new ExamQueue(studentsArray);
 
-        System.out.println("");
-        System.out.println("Current queue looks like:");
+        System.out.println("\n Current queue looks like:");
         //show the current queue
         newQueue.showTheCurrentQueue();
 
-        System.out.println("");
-        System.out.println("Looks like Oleg forgot to switch his kettle off before leaving home:");
+        System.out.println("\n Looks like Oleg forgot to switch his kettle off before leaving home:");
         //to remove exact student from the queue
         newQueue.removeStudentFromQueue(oleg);
 
-        System.out.println("");
-        System.out.println("And now the queue looks like:");
+        System.out.println("\n And now the queue looks like:");
         //show the current queue
         newQueue.showTheCurrentQueue();
 
-        System.out.println("");
-        System.out.println("Let's check if Oksana is still in queue:");
+        System.out.println("\n Let's check if Oksana is still in queue:");
         newQueue.searchInQueue("Oksana");
 
-        System.out.println("");
-        System.out.println("One more student from another group is arriving:");
+        System.out.println("\n One more student from another group is arriving:");
         newQueue.addStudentFromQueue(greg);
 
-        System.out.println("But who is Greg?? Let's check if he is in our student book:");
+        System.out.println("\n But who is Greg?? Let's check if he is in our student book:");
         StudentsBook.searchByNameAndGroup("Gregory", 234567);
 
-        System.out.println("");
-        System.out.println("And now the queue looks like:");
+        System.out.println("\n And now the queue looks like:");
         //show the current queue
         newQueue.showTheCurrentQueue();
 
-        System.out.println("");
         System.out.println(
-            "The exam is over. It is time to give books back and unassigne subjects for all");
+            "\n The exam is over. It is time to give books back and unassigne subjects for all");
         for (int i = 1; i < studentsArray.length + 1; i++) {
 
             for (int j = 0; j < listOfBooks.size(); j++) {
@@ -115,8 +105,7 @@ public class Main {
             StudentsBook.removeStudent(Integer.toString(i));
         }
 
-        System.out.println("");
         System.out.println(
-            "The end! thanks");
+            "\n The end! thanks");
     }
 }
